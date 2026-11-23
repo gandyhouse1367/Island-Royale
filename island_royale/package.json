@@ -1,0 +1,12 @@
+{
+  "name": "island-royale",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Browser-based 3D battle royale prototype with WebSocket multiplayer",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

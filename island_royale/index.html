@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Island Royale — Browser Battle Royale</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="menu" class="overlay">
+    <div class="panel">
+      <div class="eyebrow">BROWSER BATTLE ROYALE</div>
+      <h1>ISLAND <span>ROYALE</span></h1>
+      <p class="sub">Drop in. Gear up. Be the last one standing.</p>
+      <label for="playerName">PLAYER NAME</label>
+      <input id="playerName" maxlength="16" value="Player" autocomplete="off">
+      <label for="mode">GAME MODE</label>
+      <select id="mode">
+        <option value="both">Battle Royale + Zero Build</option>
+        <option value="build">Battle Royale (Building)</option>
+        <option value="zero">Zero Build</option>
+      </select>
+      <button id="playBtn">PLAY</button>
+      <div id="connection" class="status">Connecting to match server…</div>
+      <p class="small">Prototype build • Up to 20 players per server</p>
+    </div>
+  </div>
+
+  <div id="hud" class="hidden">
+    <div class="topbar">
+      <div class="brand">ISLAND <b>ROYALE</b></div>
+      <div id="matchInfo">WAITING FOR PLAYERS</div>
+      <div id="alive">ALIVE: 1</div>
+    </div>
+    <div class="crosshair">+</div>
+    <div class="bottom-left">
+      <div class="statline"><span>HEALTH</span><b id="healthText">100</b></div>
+      <div class="bar"><div id="healthBar" class="health"></div></div>
+      <div class="statline"><span>SHIELD</span><b id="shieldText">50</b></div>
+      <div class="bar"><div id="shieldBar" class="shield"></div></div>
+    </div>
+    <div class="bottom-right">
+      <div class="weapon">RIFLE <span id="ammo">30 / 90</span></div>
+      <div class="hint">WASD move · Mouse aim · Click shoot · Space jump · B build</div>
+    </div>
+    <div id="toast"></div>
+  </div>
+  <div id="mobileControls" class="hidden">
+    <div id="joystick">MOVE</div>
+    <button id="mobileFire">FIRE</button>
+    <button id="mobileBuild">BUILD</button>
+  </div>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
